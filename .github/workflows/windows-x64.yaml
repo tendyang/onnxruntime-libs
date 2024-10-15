@@ -13,11 +13,11 @@ permissions:
 env:
   ONNXRUNTIME_VERSION:
     |- # Enter release tag name or version name in workflow_dispatch. Appropriate version if not specified
-    ${{ github.event.release.tag_name || github.event.inputs.version || '1.19.0' }}
+    ${{ '1.17.1' }}
 
 jobs:
   windows_x64_static:
-    if: false
+    if: true
     name: Build onnxruntime static lib for Windows x64
     runs-on: ${{ matrix.os }}
     strategy:
@@ -58,7 +58,6 @@ jobs:
             --build_dir $build_dir \
             --config Release \
             --parallel \
-            --enable_msvc_static_runtime \
             --cmake_generator "Visual Studio 17 2022" \
             --skip_tests \
             --update \
