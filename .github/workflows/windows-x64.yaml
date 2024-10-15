@@ -77,7 +77,6 @@ jobs:
           mkdir -p $dst_dir/lib
 
           echo "copy libs"
-          find $build_dir/ -name "*.lib"
 
           cp $build_dir/Release/_deps/abseil_cpp-build/absl/base/Release/absl_base.lib $dst_dir/lib
           cp $build_dir/Release/_deps/abseil_cpp-build/absl/hash/Release/absl_city.lib $dst_dir/lib
