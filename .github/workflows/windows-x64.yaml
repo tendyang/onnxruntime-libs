@@ -112,8 +112,6 @@ jobs:
           cp ./include/onnxruntime/core/session/onnxruntime_run_options_config_keys.h $dst_dir/include
           cp ./include/onnxruntime/core/session/onnxruntime_session_options_config_keys.h $dst_dir/include
           cp ./include/onnxruntime/core/framework/provider_options.h $dst_dir/include
-          cp ./include/onnxruntime/core/providers/tensorrt/tensorrt_provider_factory.h $dst_dir/include
-
           cp ./include/onnxruntime/core/session/onnxruntime_float16.h $dst_dir/include
 
       - name: Upload artifact
